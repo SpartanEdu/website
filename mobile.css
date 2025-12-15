@@ -1,0 +1,709 @@
+/* =========================================
+   SPARTAN.EDU - iOS STYLE MOBILE
+   Apple Design Standards
+   ========================================= */
+
+@media (max-width: 768px) {
+    
+    /* ===== iOS SYSTEM FONT ===== */
+    * {
+        -webkit-font-smoothing: antialiased !important;
+        -moz-osx-font-smoothing: grayscale !important;
+        -webkit-tap-highlight-color: transparent !important;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, sans-serif !important;
+    }
+
+    /* ===== HIDE DESKTOP SIDEBAR ===== */
+    .sidebar {
+        display: none !important;
+    }
+
+    /* ===== iOS BLUR HEADER ===== */
+    .mobile-header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        height: 56px !important;
+        background: rgba(255, 255, 255, 0.92) !important;
+        backdrop-filter: saturate(180%) blur(20px) !important;
+        -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.08) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 0 16px !important;
+        z-index: 1001 !important;
+        transition: all 0.3s cubic-bezier(0.32, 0.72, 0, 1) !important;
+    }
+
+    .mobile-header.scrolled {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.06) !important;
+        border-bottom-color: rgba(0, 0, 0, 0.12) !important;
+    }
+
+    .mobile-header-menu {
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 12px !important;
+        background: linear-gradient(135deg, #FF3B30 0%, #FF2D55 100%) !important;
+        border: none !important;
+        color: white !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 18px !important;
+        cursor: pointer !important;
+        transition: all 0.25s cubic-bezier(0.32, 0.72, 0, 1) !important;
+        box-shadow: 0 2px 8px rgba(255, 59, 48, 0.25) !important;
+    }
+
+    .mobile-header-menu:active {
+        transform: scale(0.92) !important;
+        box-shadow: 0 1px 4px rgba(255, 59, 48, 0.25) !important;
+    }
+
+    .mobile-header-logo {
+        font-size: 17px !important;
+        font-weight: 600 !important;
+        letter-spacing: -0.4px !important;
+        color: #000000 !important;
+    }
+
+    /* ===== iOS PAGE LAYOUT ===== */
+    main {
+        width: 100% !important;
+        padding: 0 !important;
+        padding-top: 56px !important;
+        padding-bottom: 80px !important;
+        min-height: 100vh !important;
+        background: #f2f2f7 !important;
+    }
+
+    [id^="mod-"] {
+        width: 100% !important;
+        min-height: calc(100vh - 136px) !important;
+        opacity: 1 !important;
+        transform: scale(1) !important;
+        transition: all 0.3s cubic-bezier(0.32, 0.72, 0, 1) !important;
+    }
+
+    /* ===== iOS LEARNING PATH ===== */
+    
+    .pathway-sidebar {
+        display: none !important;
+    }
+
+    .pathway-main {
+        width: 100% !important;
+        max-width: 100% !important;
+        background: #f2f2f7 !important;
+    }
+
+    /* iOS-style lesson header */
+    .lesson-header {
+        background: white !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        margin: 0 0 12px 0 !important;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) !important;
+    }
+
+    .lesson-header > div:first-child {
+        padding: 16px !important;
+    }
+
+    .lesson-header h1 {
+        color: #000000 !important;
+        font-size: 28px !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.4px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .lesson-header button {
+        background: #f2f2f7 !important;
+        border: none !important;
+        color: #007AFF !important;
+        font-weight: 600 !important;
+        font-size: 15px !important;
+        padding: 8px 16px !important;
+        border-radius: 10px !important;
+        transition: all 0.2s cubic-bezier(0.32, 0.72, 0, 1) !important;
+    }
+
+    .lesson-header button:active {
+        background: #e5e5ea !important;
+        transform: scale(0.96) !important;
+    }
+
+    .lesson-header .btn-primary {
+        background: #007AFF !important;
+        color: white !important;
+    }
+
+    .lesson-header .btn-primary:active {
+        background: #0051D5 !important;
+    }
+
+    .lesson-nav {
+        display: flex !important;
+        gap: 8px !important;
+        padding: 0 16px 16px 16px !important;
+        border-top: 0.5px solid rgba(0, 0, 0, 0.06) !important;
+        padding-top: 16px !important;
+    }
+
+    .lesson-nav .btn {
+        flex: 1 !important;
+        height: 44px !important;
+        font-size: 15px !important;
+        font-weight: 600 !important;
+        border-radius: 10px !important;
+    }
+
+    /* iOS tabs */
+    .lesson-tabs {
+        display: flex !important;
+        gap: 0 !important;
+        padding: 0 !important;
+        margin: 0 0 12px 0 !important;
+        background: white !important;
+        position: sticky !important;
+        top: 56px !important;
+        z-index: 100 !important;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) !important;
+    }
+
+    .lesson-tab {
+        flex: 1 !important;
+        padding: 12px !important;
+        text-align: center !important;
+        color: #8E8E93 !important;
+        font-weight: 600 !important;
+        font-size: 15px !important;
+        letter-spacing: -0.2px !important;
+        cursor: pointer !important;
+        transition: all 0.2s cubic-bezier(0.32, 0.72, 0, 1) !important;
+        position: relative !important;
+        background: white !important;
+    }
+
+    .lesson-tab::after {
+        content: '' !important;
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        height: 2px !important;
+        background: #007AFF !important;
+        transform: scaleX(0) !important;
+        transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1) !important;
+    }
+
+    .lesson-tab.active {
+        color: #007AFF !important;
+    }
+
+    .lesson-tab.active::after {
+        transform: scaleX(1) !important;
+    }
+
+    .lesson-tab:active {
+        background: rgba(0, 122, 255, 0.05) !important;
+    }
+
+    /* iOS content cards */
+    .lesson-content-area {
+        padding: 0 !important;
+    }
+
+    #lesson-text-content {
+        padding: 16px !important;
+        margin: 0 12px 12px 12px !important;
+        background: white !important;
+        border-radius: 12px !important;
+        line-height: 1.5 !important;
+        font-size: 16px !important;
+        letter-spacing: -0.3px !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .lesson-description {
+        padding: 16px !important;
+        margin: 0 12px 12px 12px !important;
+        background: white !important;
+        border-radius: 12px !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .lesson-description h3 {
+        font-size: 17px !important;
+        font-weight: 600 !important;
+        margin-bottom: 8px !important;
+        color: #000000 !important;
+        letter-spacing: -0.3px !important;
+    }
+
+    .lesson-description p {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+        color: #8E8E93 !important;
+        letter-spacing: -0.2px !important;
+    }
+
+    /* ===== iOS CHAPTER CARDS ===== */
+    .chapter-list {
+        padding: 12px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+
+    .chapter-item {
+        background: white !important;
+        border: none !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+        transition: all 0.3s cubic-bezier(0.32, 0.72, 0, 1) !important;
+    }
+
+    .chapter-item:active {
+        transform: scale(0.98) !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    .chapter-header {
+        padding: 14px 16px !important;
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        cursor: pointer !important;
+        background: white !important;
+        border: none !important;
+        user-select: none !important;
+        flex-wrap: wrap !important;
+    }
+
+    .chapter-number {
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 8px !important;
+        background: #007AFF !important;
+        color: white !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-weight: 600 !important;
+        font-size: 15px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .chapter-title-row {
+        flex: 1 !important;
+        min-width: 0 !important;
+    }
+
+    .chapter-title-text {
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        color: #000000 !important;
+        margin-bottom: 6px !important;
+        letter-spacing: -0.3px !important;
+        display: block !important;
+    }
+
+    .chapter-meta-compact {
+        display: flex !important;
+        gap: 12px !important;
+        font-size: 13px !important;
+        color: #8E8E93 !important;
+        letter-spacing: -0.1px !important;
+        margin-bottom: 8px !important;
+    }
+
+    /* Chapter progress bar */
+    .chapter-progress-indicator {
+        width: 100% !important;
+        height: 3px !important;
+        background: #E5E5EA !important;
+        border-radius: 2px !important;
+        overflow: hidden !important;
+        margin-top: 4px !important;
+    }
+
+    .chapter-progress-fill {
+        height: 100% !important;
+        background: linear-gradient(90deg, #34C759 0%, #30D158 100%) !important;
+        border-radius: 2px !important;
+        transition: width 0.3s cubic-bezier(0.32, 0.72, 0, 1) !important;
+    }
+
+    .chapter-actions-compact {
+        display: flex !important;
+        gap: 4px !important;
+        align-items: center !important;
+    }
+
+    .btn-icon-sm {
+        width: 28px !important;
+        height: 28px !important;
+        border-radius: 6px !important;
+        background: #f2f2f7 !important;
+        border: none !important;
+        color: #007AFF !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 13px !important;
+        cursor: pointer !important;
+        transition: all 0.2s cubic-bezier(0.32, 0.72, 0, 1) !important;
+    }
+
+    .btn-icon-sm:active {
+        background: #e5e5ea !important;
+        transform: scale(0.9) !important;
+    }
+
+    .chapter-toggle-icon {
+        width: 28px !important;
+        height: 28px !important;
+        border-radius: 8px !important;
+        background: #f2f2f7 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        color: #8E8E93 !important;
+        transition: all 0.3s cubic-bezier(0.32, 0.72, 0, 1) !important;
+        flex-shrink: 0 !important;
+    }
+
+    .chapter-item.expanded .chapter-toggle-icon {
+        transform: rotate(180deg) !important;
+        background: rgba(0, 122, 255, 0.1) !important;
+        color: #007AFF !important;
+    }
+
+    /* iOS chapter lessons with FIXED height transition */
+    .chapter-lessons-container {
+        height: 0 !important;
+        overflow: hidden !important;
+        transition: height 0.4s cubic-bezier(0.32, 0.72, 0, 1) !important;
+        background: white !important;
+    }
+
+    /* Don't use max-height, use height with explicit values */
+    .chapter-item.expanded .chapter-lessons-container {
+        /* Height set dynamically by JS */
+    }
+
+    /* iOS lesson items */
+    .lesson-item {
+        padding: 12px 16px !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 12px !important;
+        border-top: 0.5px solid rgba(0, 0, 0, 0.06) !important;
+        cursor: pointer !important;
+        transition: background 0.2s cubic-bezier(0.32, 0.72, 0, 1) !important;
+        position: relative !important;
+        background: white !important;
+    }
+
+    .lesson-item:first-child {
+        border-top: none !important;
+    }
+
+    .lesson-item:active {
+        background: rgba(0, 122, 255, 0.05) !important;
+    }
+
+    .lesson-icon {
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 8px !important;
+        background: rgba(0, 122, 255, 0.1) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 14px !important;
+        color: #007AFF !important;
+        flex-shrink: 0 !important;
+    }
+
+    .lesson-info {
+        flex: 1 !important;
+        min-width: 0 !important;
+    }
+
+    .lesson-title {
+        font-size: 15px !important;
+        font-weight: 500 !important;
+        color: #000000 !important;
+        margin-bottom: 2px !important;
+        letter-spacing: -0.2px !important;
+    }
+
+    .lesson-meta {
+        font-size: 13px !important;
+        color: #8E8E93 !important;
+        display: flex !important;
+        gap: 8px !important;
+        align-items: center !important;
+        letter-spacing: -0.1px !important;
+    }
+
+    .lesson-status {
+        width: 22px !important;
+        height: 22px !important;
+        border-radius: 50% !important;
+        border: 2px solid #C7C7CC !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-shrink: 0 !important;
+        transition: all 0.2s cubic-bezier(0.32, 0.72, 0, 1) !important;
+        background: white !important;
+    }
+
+    .lesson-item.completed .lesson-status {
+        background: #34C759 !important;
+        border-color: #34C759 !important;
+        box-shadow: 0 2px 4px rgba(52, 199, 89, 0.2) !important;
+    }
+
+    .lesson-item.completed .lesson-status::after {
+        content: '✓' !important;
+        color: white !important;
+        font-size: 12px !important;
+        font-weight: 700 !important;
+    }
+
+    .lesson-item.active {
+        background: rgba(0, 122, 255, 0.08) !important;
+        border-left: 3px solid #007AFF !important;
+        padding-left: 13px !important;
+    }
+
+    .lesson-item.active .lesson-status {
+        border-color: #007AFF !important;
+        background: white !important;
+    }
+
+    .lesson-item.active .lesson-status::before {
+        content: '▶' !important;
+        color: #007AFF !important;
+        font-size: 8px !important;
+        margin-left: 1px !important;
+    }
+
+    /* Empty state */
+    .chapter-empty-state {
+        padding: 24px 16px !important;
+        text-align: center !important;
+        color: #8E8E93 !important;
+        font-size: 14px !important;
+    }
+
+    .chapter-empty-state i {
+        font-size: 32px !important;
+        color: #C7C7CC !important;
+        margin-bottom: 8px !important;
+        display: block !important;
+    }
+
+    /* ===== iOS BOTTOM NAV ===== */
+    .bottom-nav {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        height: 70px !important;
+        background: rgba(255, 255, 255, 0.92) !important;
+        backdrop-filter: saturate(180%) blur(20px) !important;
+        -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
+        border-top: 0.5px solid rgba(0, 0, 0, 0.08) !important;
+        display: flex !important;
+        justify-content: space-around !important;
+        align-items: center !important;
+        padding: 0 8px !important;
+        z-index: 1000 !important;
+    }
+
+    .bottom-nav-item {
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 2px !important;
+        padding: 4px !important;
+        color: #8E8E93 !important;
+        cursor: pointer !important;
+        max-width: 70px !important;
+        position: relative !important;
+        transition: all 0.2s cubic-bezier(0.32, 0.72, 0, 1) !important;
+        user-select: none !important;
+        border-radius: 8px !important;
+    }
+
+    .bottom-nav-item:active {
+        transform: scale(0.9) !important;
+    }
+
+    .bottom-nav-item.active {
+        color: #007AFF !important;
+    }
+
+    .bottom-nav-icon {
+        font-size: 24px !important;
+        transition: all 0.2s cubic-bezier(0.32, 0.72, 0, 1) !important;
+    }
+
+    .bottom-nav-item.active .bottom-nav-icon {
+        transform: scale(1.05) !important;
+    }
+
+    .bottom-nav-label {
+        font-size: 10px !important;
+        font-weight: 600 !important;
+        letter-spacing: -0.1px !important;
+    }
+
+    /* ===== iOS BUTTONS ===== */
+    .btn {
+        min-height: 44px !important;
+        font-size: 15px !important;
+        font-weight: 600 !important;
+        padding: 11px 16px !important;
+        border-radius: 10px !important;
+        transition: all 0.2s cubic-bezier(0.32, 0.72, 0, 1) !important;
+        letter-spacing: -0.2px !important;
+        border: none !important;
+    }
+
+    .btn:active {
+        transform: scale(0.96) !important;
+    }
+
+    .btn-primary {
+        background: #007AFF !important;
+        color: white !important;
+    }
+
+    .btn-primary:active {
+        background: #0051D5 !important;
+    }
+
+    .btn-secondary {
+        background: #f2f2f7 !important;
+        color: #000000 !important;
+    }
+
+    .btn-secondary:active {
+        background: #e5e5ea !important;
+    }
+
+    /* ===== iOS INPUTS ===== */
+    .input-std,
+    input,
+    textarea,
+    select {
+        font-size: 16px !important;
+        padding: 11px 12px !important;
+        height: 44px !important;
+        border-radius: 10px !important;
+        border: 0.5px solid rgba(0, 0, 0, 0.12) !important;
+        background: white !important;
+        transition: all 0.2s cubic-bezier(0.32, 0.72, 0, 1) !important;
+        letter-spacing: -0.3px !important;
+    }
+
+    .input-std:focus,
+    input:focus,
+    textarea:focus,
+    select:focus {
+        border-color: #007AFF !important;
+        box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1) !important;
+        outline: none !important;
+    }
+
+    /* ===== iOS CARDS ===== */
+    .card {
+        background: white !important;
+        border-radius: 12px !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+        border: none !important;
+    }
+
+    /* ===== iOS TOASTS ===== */
+    #toast-container {
+        bottom: 90px !important;
+        left: 12px !important;
+        right: 12px !important;
+    }
+
+    .toast {
+        padding: 14px 16px !important;
+        font-size: 15px !important;
+        font-weight: 500 !important;
+        border-radius: 12px !important;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
+        letter-spacing: -0.2px !important;
+        background: rgba(255, 255, 255, 0.92) !important;
+        backdrop-filter: saturate(180%) blur(20px) !important;
+        -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
+        border: 0.5px solid rgba(0, 0, 0, 0.08) !important;
+    }
+
+    /* ===== SAFE AREA ===== */
+    @supports (padding-bottom: env(safe-area-inset-bottom)) {
+        .bottom-nav {
+            padding-bottom: calc(8px + env(safe-area-inset-bottom)) !important;
+            height: calc(70px + env(safe-area-inset-bottom)) !important;
+        }
+
+        main {
+            padding-bottom: calc(80px + env(safe-area-inset-bottom)) !important;
+        }
+    }
+}
+
+/* ===== DARK MODE (iOS) ===== */
+@media (prefers-color-scheme: dark) {
+    body.theme-dark {
+        background: #000000 !important;
+    }
+
+    body.theme-dark main {
+        background: #000000 !important;
+    }
+
+    body.theme-dark .mobile-header {
+        background: rgba(28, 28, 30, 0.92) !important;
+        border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    body.theme-dark .bottom-nav {
+        background: rgba(28, 28, 30, 0.92) !important;
+        border-top-color: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    body.theme-dark .chapter-item,
+    body.theme-dark .lesson-header,
+    body.theme-dark #lesson-text-content,
+    body.theme-dark .lesson-description {
+        background: #1C1C1E !important;
+        color: #FFFFFF !important;
+    }
+
+    body.theme-dark .chapter-title-text,
+    body.theme-dark .lesson-title,
+    body.theme-dark h1, body.theme-dark h2, body.theme-dark h3 {
+        color: #FFFFFF !important;
+    }
+}
