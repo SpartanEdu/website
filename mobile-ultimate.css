@@ -1,0 +1,553 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   SPARTAN.EDU MOBILE ULTIMATE - PREMIUM ADDITIONS
+   iOS-style premium features optimized for mobile
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+    /* ===== PREMIUM PIANO RECORDING (MOBILE) ===== */
+    #piano-ultimate-controls {
+        flex-direction: column !important;
+        gap: 12px !important;
+        padding: 16px !important;
+        margin-bottom: 20px !important;
+    }
+
+    #piano-ultimate-controls button {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 14px !important;
+        font-size: 1rem !important;
+        border-radius: 12px !important;
+    }
+
+    #piano-timer {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 12px !important;
+        background: rgba(239, 68, 68, 0.1) !important;
+        border-radius: 12px !important;
+        margin: 0 !important;
+    }
+
+    #btn-piano-record.recording {
+        background: #EF4444 !important;
+        color: white !important;
+    }
+
+    /* ===== POMODORO WIDGET (MOBILE) ===== */
+    #pomodoro-widget {
+        bottom: 80px !important;
+        right: 16px !important;
+        width: calc(100vw - 32px) !important;
+        max-width: 320px !important;
+        padding: 20px !important;
+        border-radius: 20px !important;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    #pomodoro-display {
+        font-size: 3.5rem !important;
+        margin: 25px 0 !important;
+    }
+
+    #pomodoro-widget button {
+        padding: 12px 20px !important;
+        border-radius: 12px !important;
+        font-size: 1rem !important;
+    }
+
+    /* ===== GLOBAL SEARCH (MOBILE) ===== */
+    #global-search {
+        padding-top: 80px !important;
+    }
+
+    #global-search > div {
+        width: calc(100% - 32px) !important;
+        margin: 0 16px !important;
+        border-radius: 20px !important;
+    }
+
+    #global-search-input {
+        padding: 18px 20px !important;
+        font-size: 1.1rem !important;
+    }
+
+    .search-result-item {
+        padding: 18px 20px !important;
+        min-height: 60px !important;
+    }
+
+    /* ===== ANALYTICS MODALS (MOBILE) ===== */
+    .modal-box {
+        width: calc(100% - 32px) !important;
+        max-width: none !important;
+        margin: 16px !important;
+        border-radius: 20px !important;
+        max-height: calc(100vh - 100px) !important;
+        overflow-y: auto !important;
+    }
+
+    .analytics-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    .stat-card {
+        padding: 16px !important;
+        border-radius: 16px !important;
+    }
+
+    .stat-card > div:first-child {
+        font-size: 2rem !important;
+    }
+
+    .stat-card > div:last-child {
+        font-size: 0.85rem !important;
+    }
+
+    /* ===== PIANO STATS MODAL (MOBILE) ===== */
+    .composition-item {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+    }
+
+    .composition-item > div:last-child {
+        width: 100% !important;
+        justify-content: flex-end !important;
+    }
+
+    /* ===== TOUCH-FRIENDLY BUTTONS ===== */
+    .btn {
+        min-height: 44px !important;
+        padding: 12px 20px !important;
+        font-size: 1rem !important;
+        border-radius: 12px !important;
+        transition: all 0.2s cubic-bezier(0.32, 0.72, 0, 1) !important;
+    }
+
+    .btn:active {
+        transform: scale(0.97) !important;
+        opacity: 0.9 !important;
+    }
+
+    /* ===== BOTTOM SHEET STYLE MODALS ===== */
+    .modal-overlay {
+        align-items: flex-end !important;
+        padding: 0 !important;
+    }
+
+    .modal-overlay .modal-box {
+        border-radius: 24px 24px 0 0 !important;
+        animation: slideUp 0.3s cubic-bezier(0.32, 0.72, 0, 1) !important;
+        max-height: 90vh !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* ===== MODAL HANDLE (SWIPE INDICATOR) ===== */
+    .modal-box::before {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 4px;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 2px;
+        margin: 12px auto 20px;
+    }
+
+    /* ===== FLASHCARDS ANALYTICS BUTTON ===== */
+    #btn-fc-analytics {
+        width: auto !important;
+        padding: 10px 16px !important;
+    }
+
+    .fc-header .flex.gap-10 {
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+    }
+
+    /* ===== PIANO KEYS MOBILE OPTIMIZATION ===== */
+    .keys-wrapper {
+        overflow-x: auto !important;
+        padding-bottom: 10px !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    .key {
+        min-width: 42px !important;
+    }
+
+    .key-white {
+        width: 42px !important;
+    }
+
+    .key-black {
+        width: 28px !important;
+    }
+
+    /* ===== RECORDING INDICATOR ===== */
+    @keyframes recordPulse {
+        0%, 100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        50% {
+            opacity: 0.7;
+            transform: scale(1.1);
+        }
+    }
+
+    #piano-timer i {
+        animation: recordPulse 1s ease-in-out infinite !important;
+    }
+
+    /* ===== COMPOSITION LIST (MOBILE) ===== */
+    .composition-item {
+        padding: 16px !important;
+        border-radius: 12px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .composition-item button {
+        width: 44px !important;
+        height: 44px !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* ===== STATS CARDS MOBILE ===== */
+    .progress-chart {
+        padding: 16px !important;
+        height: 180px !important;
+    }
+
+    /* ===== TASK POMODORO BUTTON ===== */
+    .task-board-header .flex.gap-10 {
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+    }
+
+    #btn-pomodoro {
+        order: -1 !important;
+        flex: 1 1 calc(50% - 4px) !important;
+        min-width: 140px !important;
+    }
+
+    /* ===== SWIPE GESTURE INDICATORS ===== */
+    .swipeable {
+        position: relative !important;
+        touch-action: pan-y !important;
+    }
+
+    .swipeable::after {
+        content: '⟨ Swipe';
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: rgba(0, 0, 0, 0.3);
+        font-size: 0.85rem;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .swipeable:active::after {
+        opacity: 1;
+    }
+
+    /* ===== PULL TO REFRESH INDICATOR ===== */
+    .pull-to-refresh {
+        position: fixed;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%) scale(0);
+        width: 40px;
+        height: 40px;
+        background: var(--bg-surface);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+        z-index: 999;
+    }
+
+    .pull-to-refresh.active {
+        transform: translateX(-50%) scale(1);
+    }
+
+    .pull-to-refresh i {
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* ===== HAPTIC FEEDBACK VISUAL ===== */
+    @keyframes hapticPulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(255, 81, 47, 0.4);
+        }
+        70% {
+            box-shadow: 0 0 0 10px rgba(255, 81, 47, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(255, 81, 47, 0);
+        }
+    }
+
+    .haptic-feedback {
+        animation: hapticPulse 0.3s ease-out !important;
+    }
+
+    /* ===== FLOATING ACTION BUTTON (FAB) ===== */
+    .fab {
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #FF512F 0%, #DD2476 100%);
+        color: white;
+        border: none;
+        box-shadow: 0 8px 24px rgba(255, 81, 47, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        z-index: 999;
+        transition: all 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    }
+
+    .fab:active {
+        transform: scale(0.9);
+    }
+
+    .fab.hidden {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    /* ===== SNACKBAR NOTIFICATIONS (iOS STYLE) ===== */
+    .toast {
+        bottom: 90px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        min-width: 300px !important;
+        max-width: calc(100% - 32px) !important;
+        border-radius: 16px !important;
+        padding: 16px 20px !important;
+        font-size: 0.95rem !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+    }
+
+    /* ===== LOADING SKELETON ===== */
+    .skeleton {
+        background: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.06) 25%,
+            rgba(0, 0, 0, 0.15) 50%,
+            rgba(0, 0, 0, 0.06) 75%
+        );
+        background-size: 200% 100%;
+        animation: shimmer 1.5s ease-in-out infinite;
+        border-radius: 8px;
+    }
+
+    @keyframes shimmer {
+        0% {
+            background-position: -200% 0;
+        }
+        100% {
+            background-position: 200% 0;
+        }
+    }
+
+    /* ===== SAFE AREA INSETS (iPhone X+) ===== */
+    .mobile-header {
+        padding-top: env(safe-area-inset-top) !important;
+        height: calc(56px + env(safe-area-inset-top)) !important;
+    }
+
+    .mobile-nav {
+        padding-bottom: env(safe-area-inset-bottom) !important;
+        height: calc(60px + env(safe-area-inset-bottom)) !important;
+    }
+
+    .main-content {
+        padding-top: calc(56px + env(safe-area-inset-top)) !important;
+        padding-bottom: calc(70px + env(safe-area-inset-bottom)) !important;
+    }
+
+    /* ===== DARK MODE ADJUSTMENTS ===== */
+    .theme-dark .mobile-header {
+        background: rgba(28, 28, 30, 0.92) !important;
+        border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    .theme-dark .mobile-nav {
+        background: rgba(28, 28, 30, 0.92) !important;
+        border-top-color: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    .theme-dark #piano-timer {
+        background: rgba(239, 68, 68, 0.2) !important;
+    }
+
+    .theme-dark .pull-to-refresh {
+        background: rgba(44, 44, 46, 1) !important;
+    }
+
+    /* ===== PREMIUM CARD EFFECTS ===== */
+    .card-premium {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card-premium::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+            135deg,
+            transparent 40%,
+            rgba(255, 255, 255, 0.1) 50%,
+            transparent 60%
+        );
+        transform: rotate(45deg);
+        transition: all 0.5s;
+        opacity: 0;
+    }
+
+    .card-premium:active::before {
+        opacity: 1;
+        animation: shine 0.6s ease-out;
+    }
+
+    @keyframes shine {
+        0% {
+            right: -50%;
+        }
+        100% {
+            right: 150%;
+        }
+    }
+
+    /* ===== SCROLL INDICATORS ===== */
+    .scroll-indicator {
+        position: fixed;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 60px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 2px;
+        z-index: 998;
+    }
+
+    .scroll-indicator-thumb {
+        width: 100%;
+        background: var(--accent-color);
+        border-radius: 2px;
+        transition: height 0.2s;
+    }
+
+    /* ===== BETTER TOUCH TARGETS ===== */
+    .clickable {
+        min-height: 44px !important;
+        min-width: 44px !important;
+    }
+
+    /* ===== SMOOTH SCROLL ===== */
+    * {
+        scroll-behavior: smooth !important;
+    }
+
+    /* ===== PREVENT OVERSCROLL (iOS BOUNCE) ===== */
+    body {
+        overscroll-behavior-y: contain !important;
+    }
+
+    /* ===== OPTIMIZED ANIMATIONS ===== */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+
+    /* ===== LANDSCAPE MODE ADJUSTMENTS ===== */
+    @media (orientation: landscape) and (max-height: 500px) {
+        #pomodoro-widget {
+            width: 240px !important;
+            padding: 16px !important;
+            bottom: 70px !important;
+        }
+
+        #pomodoro-display {
+            font-size: 2.5rem !important;
+            margin: 15px 0 !important;
+        }
+
+        .modal-box {
+            max-height: calc(100vh - 40px) !important;
+        }
+    }
+
+    /* ===== SMALL SCREENS (iPhone SE) ===== */
+    @media (max-width: 375px) {
+        #piano-ultimate-controls button {
+            font-size: 0.9rem !important;
+            padding: 12px !important;
+        }
+
+        #pomodoro-display {
+            font-size: 2.8rem !important;
+        }
+
+        .stat-card > div:first-child {
+            font-size: 1.6rem !important;
+        }
+    }
+
+    /* ===== VERY SMALL SCREENS (iPhone 5/SE) ===== */
+    @media (max-width: 320px) {
+        .analytics-grid {
+            grid-template-columns: 1fr !important;
+        }
+
+        #btn-pomodoro {
+            flex: 1 1 100% !important;
+        }
+    }
+
+}
